@@ -34,6 +34,9 @@ public class FindFirstMissingPositive {
 		}
 		for(int i=firstIdx;i<len;i++)
 		{
+			if(i>0 && A[i] == A[i-1]){
+                continue;
+            }// to handle the duplicate numbers scenario
 			if(first == A[i])
 			{
 				first++;
